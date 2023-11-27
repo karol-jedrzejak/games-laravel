@@ -1,0 +1,14 @@
+.admin h1 {
+  margin: 10px;
+}
+.admin h2 {
+  margin: 6px;
+}
+
+.w-5 {
+  width: 5rem;
+}
+
+.h-5 {
+  height: 5rem;
+}

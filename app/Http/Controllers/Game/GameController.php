@@ -10,7 +10,7 @@ use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
 //use App\Models\Game;
 use App\Facades\Game;
-use App\Repository\Eloquent\GameRepository;
+use App\Repository\GameRepository;
 
 class GameController extends Controller
 {

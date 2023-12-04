@@ -6,12 +6,12 @@ namespace App\Repository\Eloquent;
 
 use App\Models\Game;
 use App\Repository\GameRepository as GameRepositoryInterface;
-
+use App\Service\FakeService;
 class GameRepository implements  GameRepositoryInterface
 {
     private Game $gameModel;
 
-    public function __construct(Game $gameModel)
+    public function __construct(Game $gameModel,FakeService $config)
     {
        $this->gameModel = $gameModel;
     }

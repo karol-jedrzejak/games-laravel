@@ -10,11 +10,11 @@ class FakeService
 
     public function __construct(string $configParam)
     {
-        $this->$config = $configParam;
+        $this->config = $configParam;
     }
 
-    public function getConfig()
+    public function getConfig(): string
     {
-        return $this->$config;
+        return $this->config;
     }
 }

@@ -15,14 +15,24 @@ class GameServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        //dump('reg');
         //Nazwa klasy, nazwa implementacji
-        //$this->app->bind(GameRepository::class,EloquentGameRepository::class);
-        $this->app->bind(
+        $this->app->bind(GameRepository::class,EloquentGameRepository::class);
+
+/*         $this->app->bind(
+            GameRepository::class,function($app){
+                dump('reg - bind');
+                $gamemodel = $app->make(Game::class);
+                return new EloquentGameRepository($gamemodel);
+            }); */
+
+        /* $this->app->bind(
             GameRepository::class,function($app){
                 //$config = config('test');
-                $fake = new FakeService('test');
-                return new EloquentGameRepository($app->make(Game::class),$fake);
-            });
+                $gamemodel = $app->make(Game::class);
+                $fake = $app->make(FakeService::class);
+                return new EloquentGameRepository($gamemodel,$fake);
+            }); */
     }
 
     /**
@@ -30,6 +40,6 @@ class GameServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        //dump('boot');
     }
 }
